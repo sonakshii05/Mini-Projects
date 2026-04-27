@@ -103,7 +103,7 @@ Mini-Projects/
 ├── translator/
 ├── music-player/
 
-
+'''
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Cinzel&size=30&duration=3000&pause=1000&color=F5D78E&center=true&vCenter=true&width=700&lines=Mini+Frontend+Projects+Universe;Crafting+Interfaces+%E2%9C%A8;Where+Code+Meets+Design" />
 </p>
