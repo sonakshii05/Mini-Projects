@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Universe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🌌 My Project Universe</h1>
+
+    <!-- Search -->
+    <input type="text" id="search" placeholder="Search projects...">
+
+    <!-- Filters -->
+    <div class="filters">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('current')">Current</button>
+        <button onclick="filterProjects('completed')">Completed</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="container" id="projectContainer">
+
+    <div class="card"
+     data-name="Password Generator"
+     data-status="completed"
+     data-link="PasswordGenerator/index.html"
+    <h3>Password Generator</h3>
+    <p>Completed</p>
+</div>
+      <div class="card"
+     data-name="Translator"
+     data-status="current"
+     data-link="translator/index.html">
+    <h3>Translator</h3>
+    <p>Current</p>
+</div>
+
+<div class="card"
+     data-name="Music Player"
+     data-status="current"
+     data-link="Music Player/index.html">
+    <h3>Translator</h3>
+    <p>Current</p>
+</div>
+    </div>
+<div class="magic-bg"></div>
+    <script src="script.js"></script>
+</body>
+</html>
