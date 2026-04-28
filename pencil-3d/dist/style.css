@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+    font-family: Arial;
+}
+
+/* 🎛️ Control Panel */
+#controls {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+
+    background: rgba(20, 20, 30, 0.7);
+    backdrop-filter: blur(10px);
+
+    padding: 15px;
+    border-radius: 12px;
+
+    color: #f5d78e;
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 120px;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 🖌️ Canvas */
+canvas {
+    display: block;
+}
