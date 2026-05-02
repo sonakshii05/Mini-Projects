@@ -1,0 +1,184 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* BASE */
+body {
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND SHAPE */
+.bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #0ea5e9;
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+/* NAVBAR */
+.nav {
+  width: 100%;
+  padding: 20px 40px;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.nav-inner a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.nav-inner a:hover {
+  background: white;
+  color: black;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: white;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* IMAGE */
+.image img {
+  width: 350px;
+}
+
+/* PAGE LAYOUT */
+.page {
+  padding: 80px;
+  max-width: 900px;
+}
+
+.page h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* CARDS CONTAINER */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* GLASSMORPHISM CARD */
+.card {
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* CARD IMAGE */
+.card img {
+  width: 140px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.3));
+}
+
+/* CARD TEXT */
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .image img {
+    width: 280px;
+    margin-top: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page {
+    padding: 40px 20px;
+    text-align: center;
+  }
+}
