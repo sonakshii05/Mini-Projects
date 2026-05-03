@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Snake & Ladder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🐍 Snake & Ladder 🪜</h1>
+
+<div id="game">
+  <div id="board"></div>
+  <svg id="overlay"></svg>
+
+  <div id="player1" class="player p1"></div>
+  <div id="player2" class="player p2"></div>
+</div>
+
+<div class="controls">
+  <button onclick="rollDice()">🎲 Roll Dice</button>
+  <p id="status">Player 1 Turn</p>
+</div>
+
+<div id="winScreen" class="hidden">
+  <h2 id="winnerText"></h2>
+  <button onclick="restartGame()">Play Again</button>
+</div>
+
+<audio id="diceSound" src="https://assets.mixkit.co/sfx/preview/mixkit-dice-rolling-1996.mp3"></audio>
+<audio id="snakeSound" src="https://assets.mixkit.co/sfx/preview/mixkit-ominous-drone-227.mp3"></audio>
+<audio id="ladderSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

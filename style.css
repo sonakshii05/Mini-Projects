@@ -1,123 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400&display=swap');
 
+/* 🌑 ROOT THEME (from your Tailwind config) */
+:root {
+  --void: #050510;
+  --midnight: #0a0a1a;
+  --deep-purple: #1a0a2e;
+  --mystic: #2d1b69;
+  --arcane: #7c3aed;
+  --arcane-light: #a78bfa;
+
+  --gold: #f59e0b;
+  --gold-light: #fcd34d;
+
+  --glow-blue: #60a5fa;
+  --glow-cyan: #22d3ee;
+  --ember: #f97316;
+
+  --font-cinzel: 'Cinzel', serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+/* 🌌 BODY */
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0b0f1a, #000000);
-    color: #f5e6c8;
-    text-align: center;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: var(--font-poppins);
+  background: radial-gradient(circle at top, var(--midnight), #000);
+  color: #f5e6c8;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-/* Title */
+/* ✨ TITLE */
 h1 {
-    font-family: 'Cinzel', serif;
-    margin-top: 30px;
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-    color: #f5d78e;
-    text-shadow: 0 0 15px rgba(255, 215, 100, 0.6);
+  font-family: var(--font-cinzel);
+  margin-top: 30px;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: var(--gold-light);
+  text-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
 }
 
-/* Search */
+/* 🔍 SEARCH */
 #search {
-    margin-top: 20px;
-    padding: 12px 18px;
-    width: 260px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    background: rgba(255, 255, 255, 0.05);
-    color: #f5e6c8;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(255, 215, 100, 0.2);
+  margin-top: 20px;
+  padding: 12px 18px;
+  width: 260px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5e6c8;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
 }
 
-/* Filters */
+/* 🎛 FILTERS */
 .filters {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .filters button {
-    padding: 10px 18px;
-    margin: 5px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background: rgba(255, 215, 100, 0.08);
-    color: #f5e6c8;
-    font-family: 'Cinzel', serif;
-    letter-spacing: 1px;
-    transition: 0.3s;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  background: rgba(245, 158, 11, 0.08);
+  color: #f5e6c8;
+
+  font-family: var(--font-cinzel);
+  letter-spacing: 1px;
+  transition: 0.3s;
 }
 
 .filters button:hover {
-    background: rgba(255, 215, 100, 0.2);
-    box-shadow: 0 0 10px rgba(255, 215, 100, 0.5);
+  background: rgba(245, 158, 11, 0.2);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
 }
 
-/* Container */
+/* 📦 CONTAINER */
 .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 35px;
-    padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  padding: 40px;
 }
 
-/* Magical Cards */
+/* 🪄 CARDS */
 .card {
-    width: 230px;
-    padding: 25px;
-    border-radius: 20px;
-    cursor: pointer;
+  width: 230px;
+  padding: 25px;
+  border-radius: 20px;
+  cursor: pointer;
 
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 215, 100, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 158, 11, 0.2);
 
-    box-shadow: 0 0 20px rgba(255, 215, 100, 0.15);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
 
-    transition: all 0.4s ease;
-    animation: float 6s ease-in-out infinite;
+  transition: all 0.4s ease;
+  animation: float 6s ease-in-out infinite;
 }
 
-/* Hover spell effect */
+/* 🔮 HOVER SPELL */
 .card:hover {
-    transform: translateY(-12px) scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 215, 100, 0.6),
-                0 0 60px rgba(138, 43, 226, 0.3);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow:
+    0 0 30px rgba(245, 158, 11, 0.6),
+    0 0 60px rgba(124, 58, 237, 0.3);
 }
 
-/* Floating animation */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
-
-/* Text */
+/* 📝 TEXT */
 .card h3 {
-    font-family: 'Cinzel', serif;
-    margin-bottom: 10px;
-    color: #f5d78e;
+  font-family: var(--font-cinzel);
+  margin-bottom: 10px;
+  color: var(--gold-light);
 }
 
 .card p {
-    opacity: 0.7;
-}
-.magic-bg {
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(138,43,226,0.2), transparent 70%);
-    top: -150px;
-    left: -150px;
-    z-index: -1;
-    animation: pulse 8s infinite alternate;
+  opacity: 0.7;
 }
 
+/* 🌟 MAGIC BACKGROUND */
+.magic-bg {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.2), transparent 70%);
+  top: -150px;
+  left: -150px;
+  z-index: -1;
+  animation: pulse 8s infinite alternate;
+}
+
+/* 🌊 FLOAT */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* 💫 PULSE */
 @keyframes pulse {
-    from { transform: scale(1); opacity: 0.5; }
-    to { transform: scale(1.3); opacity: 0.8; }
+  from { transform: scale(1); opacity: 0.5; }
+  to { transform: scale(1.3); opacity: 0.8; }
+}
+
+/* ✨ EXTRA (from your config, now usable) */
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+}
+
+.shadow-glow-gold {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(124, 58, 237, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(124, 58, 237, 0.7); }
 }
