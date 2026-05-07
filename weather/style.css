@@ -1,0 +1,246 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #090c1f,
+    #11183c,
+    #1d1145,
+    #2b1055
+  );
+
+  color: white;
+}
+
+.container{
+  width: 360px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(12px);
+
+  padding: 30px;
+
+  border-radius: 22px;
+
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+
+  text-align: center;
+}
+
+.container h1{
+  margin-bottom: 25px;
+  font-size: 34px;
+  color: #c084fc;
+}
+
+.search-box{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input{
+  flex: 1;
+  padding: 12px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.1);
+
+  color: white;
+
+  font-size: 16px;
+}
+
+.search-box input::placeholder{
+  color: #cfcfcf;
+}
+
+.search-box button{
+  padding: 12px 18px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #7b2ff7,
+    #9f44ff
+  );
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.search-box button:hover{
+  transform: scale(1.05);
+}
+
+.weather-card{
+  display: none;
+  animation: fade 0.5s ease;
+}
+
+.weather-card img{
+  width: 120px;
+}
+
+#temperature{
+  font-size: 52px;
+  margin: 10px 0;
+}
+
+#cityName{
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+#condition{
+  color: #d6bcfa;
+  margin-bottom: 20px;
+}
+
+.details{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.detail-box{
+  width: 48%;
+
+  background: rgba(255,255,255,0.08);
+
+  padding: 15px;
+
+  border-radius: 15px;
+}
+
+.detail-box span{
+  font-size: 14px;
+  color: #ccc;
+}
+
+.detail-box h4{
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.error{
+  display: none;
+  color: #ff9aa2;
+  margin-bottom: 15px;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body::before{
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: purple;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  top: -100px;
+  left: -100px;
+
+  opacity: 0.3;
+}
+
+body::after{
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  background: #3b82f6;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  bottom: -100px;
+  right: -100px;
+
+  opacity: 0.3;
+}
+body::before{
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: purple;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  top: -100px;
+  left: -100px;
+
+  opacity: 0.3;
+}
+
+body::after{
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  background: #3b82f6;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  bottom: -100px;
+  right: -100px;
+
+  opacity: 0.3;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Weather App</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Weather App</h1>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div class="error" id="error">
+      City not found!
+    </div>
+
+    <div class="weather-card" id="weatherCard">
+
+      <img id="weatherIcon" src="" alt="Weather Icon">
+
+      <h2 id="temperature">0°C</h2>
+
+      <h3 id="cityName">City Name</h3>
+
+      <p id="condition">Condition</p>
+
+      <div class="details">
+
+        <div class="detail-box">
+          <span>Humidity</span>
+          <h4 id="humidity">0%</h4>
+        </div>
+
+        <div class="detail-box">
+          <span>Wind</span>
+          <h4 id="wind">0 km/h</h4>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

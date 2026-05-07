@@ -1,36 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Snake & Ladder</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake and Ladder</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="stage">
+    <div class="background-fog"></div>
+    <div class="game-shell">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">Dark Fantasy Board Game</p>
+          <h1>Snake &amp; Ladder</h1>
+        </div>
+        <div class="sound-panel">
+          <button id="muteToggle" class="ghost-btn">Mute Music</button>
+        </div>
+      </header>
 
-<h1>🐍 Snake & Ladder 🪜</h1>
+      <section class="board-layout">
+        <div class="board-frame">
+          <div id="board" class="board"></div>
+          <svg id="board-overlay" class="board-overlay" preserveAspectRatio="none"></svg>
+          <div id="player1" class="player token token1"><span>1</span></div>
+          <div id="player2" class="player token token2"><span>2</span></div>
+        </div>
 
-<div id="game">
-  <div id="board"></div>
-  <svg id="overlay"></svg>
+        <aside class="game-panel">
+          <div class="status-card">
+            <div>
+              <span>Active</span>
+              <strong id="currentPlayerText">Player 1</strong>
+            </div>
+            <div class="active-chip token1-glow"></div>
+          </div>
 
-  <div id="player1" class="player p1"></div>
-  <div id="player2" class="player p2"></div>
-</div>
+          <div class="score-card">
+            <div>
+              <span>Player 1 Wins</span>
+              <strong id="player1Score">0</strong>
+            </div>
+            <div>
+              <span>Player 2 Wins</span>
+              <strong id="player2Score">0</strong>
+            </div>
+          </div>
 
-<div class="controls">
-  <button onclick="rollDice()">🎲 Roll Dice</button>
-  <p id="status">Player 1 Turn</p>
-</div>
+          <div class="dice-card">
+            <p class="label">Animated Dice</p>
+            <div class="dice-cube" id="diceCube">
+              <div class="face face1" data-face="1"></div>
+              <div class="face face2" data-face="2"></div>
+              <div class="face face3" data-face="3"></div>
+              <div class="face face4" data-face="4"></div>
+              <div class="face face5" data-face="5"></div>
+              <div class="face face6" data-face="6"></div>
+            </div>
+            <p id="diceResult" class="dice-result">Roll: -</p>
+          </div>
 
-<div id="winScreen" class="hidden">
-  <h2 id="winnerText"></h2>
-  <button onclick="restartGame()">Play Again</button>
-</div>
+          <div class="control-group">
+            <button id="rollButton" class="primary-btn">Roll Dice</button>
+            <button id="pauseButton" class="secondary-btn">Pause</button>
+          </div>
 
-<audio id="diceSound" src="https://assets.mixkit.co/sfx/preview/mixkit-dice-rolling-1996.mp3"></audio>
-<audio id="snakeSound" src="https://assets.mixkit.co/sfx/preview/mixkit-ominous-drone-227.mp3"></audio>
-<audio id="ladderSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+          <div class="info-card">
+            <p id="statusText">Player 1 turn. Roll the dice to move.</p>
+          </div>
 
-<script src="script.js"></script>
+          <div class="toggle-grid">
+            <button id="aiButton" class="ghost-btn">Play vs AI</button>
+            <button id="restartButton" class="ghost-btn">Restart</button>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </div>
+
+  <div id="victoryPopup" class="popup hidden">
+    <div class="popup-card">
+      <div class="celebration-glow"></div>
+      <h2 id="winnerText">Player 1 Wins!</h2>
+      <p>Epic victory in the neon realm.</p>
+      <button id="popupRestart" class="primary-btn">Play Again</button>
+    </div>
+    <div id="confettiLayer" class="confetti-layer"></div>
+  </div>
+
+  <audio id="diceAudio" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-dice-rolling-1996.mp3"></audio>
+  <audio id="snakeAudio" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-ominous-drone-227.mp3"></audio>
+  <audio id="ladderAudio" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+  <audio id="victoryAudio" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-confetti-2066.mp3"></audio>
+  <audio id="musicAudio" preload="auto" loop src="https://assets.mixkit.co/music/preview/mixkit-fantasy-ambient-1211.mp3"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
